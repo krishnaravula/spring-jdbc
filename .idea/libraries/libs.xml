@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="file://$USER_HOME$/OneDrive/Documents/spring-5.3.8-dist/spring-framework-5.3.8/libs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/OneDrive/Documents/spring-5.3.8-dist/spring-framework-5.3.8/libs" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/OneDrive/Documents/spring-5.3.8-dist/spring-framework-5.3.8/libs" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/OneDrive/Documents/spring-5.3.8-dist/spring-framework-5.3.8/libs" recursive="false" type="SOURCES" />
+  </library>
+</component>

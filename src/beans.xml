@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-5.3.8.xsd"
+>
+    <context:component-scan base-package="com.sai"/>
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/rsk"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Acadia@123"/>
+
+    </bean>
+
+    <bean id="jdbcTempleteObject" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg name="dataSource"  ref="dataSource"/>
+    </bean>
+
+<!--    <bean id="studentDao" class="com.sai.dao.StudentDaoImpl">-->
+<!--        <property name="jdbcTemplate" ref="jdbcTempleteObject"/>-->
+<!--    </bean>-->
+
+</beans>
